@@ -4,20 +4,28 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
-import { Card, CardHeader, CardBody, CardFooter, Heading, Button, SimpleGrid, Container, Divider } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Heading, Button, SimpleGrid, Container, Divider, Center } from '@chakra-ui/react'
 
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
 
-<Heading as='h1' size='4xl' noOfLines={1}>I'm a Heading</Heading>
+<Center >
+  
+
+<Heading as='h1' >I'm a Heading</Heading>
+</Center>
 
 
-<Divider orientation='vertical' />
+<Center height='50px'>
+  <Divider orientation='vertical' />
+</Center>
 
 
-<Container maxW='2xl' bg='blue.600' centerContent>
+
+
+<Container maxW='2xl'  centerContent>
 
 <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
   <Card>
@@ -53,8 +61,22 @@ function App() {
       <Button>View here</Button>
     </CardFooter>
   </Card>
+  <Card>
+    <CardHeader>
+      <Heading size='md'> Customer dashboard</Heading>
+    </CardHeader>
+    <CardBody>
+      <Text>View a summary of all your customers over the last month.</Text>
+    </CardBody>
+    <CardFooter>
+      <Button>View here</Button>
+    </CardFooter>
+  </Card>
 </SimpleGrid>
 
+<Center height='50px'>
+  <Divider orientation='vertical' />
+</Center>
 </Container>
 
 

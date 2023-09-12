@@ -27,6 +27,8 @@ const Layout = () => {
     <ListItem>
     <ListIcon as={MdWeekend} color='green.500' />
     <Link to="/Page1">Page1</Link>
+	    <ListIcon as={MdWeekend} color='green.500' />
+    <Link to="/Page2">Page2</Link>
   </ListItem>
   </List>
 </TabPanel>

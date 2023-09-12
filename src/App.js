@@ -4,6 +4,7 @@ import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import { Container } from '@chakra-ui/react'
 import Page1 from './page1';
+import Page2 from './page2';
 import Layout from './Layout';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { SimpleGrid, Box, Grid, GridItem, Center  } from '@chakra-ui/react';
@@ -18,7 +19,7 @@ function App() {
       <Routes>
       <Route path="/" exact element={<Layout />}>
       <Route path="Page1" exact element={<Page1 />} />
-
+      <Route path="Page2" exact element={<Page2 />} />
       </Route>
         </Routes>
 </BrowserRouter>

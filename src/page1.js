@@ -3,19 +3,20 @@ import { ChakraProvider, theme,} from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
 import { Center, Square, Circle, Heading, Divider, Button, Text, SimpleGrid  } from '@chakra-ui/react'
+import { Link } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 const Page1 = () => {
 
 
 
   return (<ChakraProvider>
-
-  
 <Center >
-  
-
-<Heading as='h1' >I'm a Heading new</Heading>
+<Link href='https://chakra-red.vercel.app/' isExternal>
+  Back to Home <ExternalLinkIcon mx='2px' />
+</Link>
 </Center>
+
 
 
 <Center height='50px'>

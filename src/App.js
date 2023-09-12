@@ -1,87 +1,35 @@
 import React from 'react';
-import {
-  ChakraProvider,Box,Text,Link,VStack,Code,Grid,theme,
-} from '@chakra-ui/react';
+import { ChakraProvider, theme,} from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
-import { Card, CardHeader, CardBody, CardFooter, Heading, Button, SimpleGrid, Container, Divider, Center } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
+import Page1 from './page1';
+import Layout from './Layout';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { SimpleGrid } from '@chakra-ui/react';
+
+
 
 
 function App() {
-  return (
-    <ChakraProvider theme={theme}>
+  return (<ChakraProvider>
+  <Container>
+          <BrowserRouter>
+      <Routes>
+      <Route path="/" exact element={<Layout />}>
+      <Route path="Page1" exact element={<Page1 />} />
 
-<Center >
-  
-
-<Heading as='h1' >I'm a Heading</Heading>
-</Center>
-
-
-<Center height='50px'>
-  <Divider orientation='vertical' />
-</Center>
-
-
-
-
-<Container maxW='2xl'  centerContent>
-
-<SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
-  <Card>
-    <CardHeader>
-      <Heading size='md'> Customer dashboard</Heading>
-    </CardHeader>
-    <CardBody>
-      <Text>View a summary of all your customers over the last month.</Text>
-    </CardBody>
-    <CardFooter>
-      <Button>View here</Button>
-    </CardFooter>
-  </Card>
-  <Card>
-    <CardHeader>
-      <Heading size='md'> Customer dashboard</Heading>
-    </CardHeader>
-    <CardBody>
-      <Text>View a summary of all your customers over the last month.</Text>
-    </CardBody>
-    <CardFooter>
-      <Button>View here</Button>
-    </CardFooter>
-  </Card>
-  <Card>
-    <CardHeader>
-      <Heading size='md'> Customer dashboard</Heading>
-    </CardHeader>
-    <CardBody>
-      <Text>View a summary of all your customers over the last month.</Text>
-    </CardBody>
-    <CardFooter>
-      <Button>View here</Button>
-    </CardFooter>
-  </Card>
-  <Card>
-    <CardHeader>
-      <Heading size='md'> Customer dashboard</Heading>
-    </CardHeader>
-    <CardBody>
-      <Text>View a summary of all your customers over the last month.</Text>
-    </CardBody>
-    <CardFooter>
-      <Button>View here</Button>
-    </CardFooter>
-  </Card>
-</SimpleGrid>
-
-<Center height='50px'>
-  <Divider orientation='vertical' />
-</Center>
+      </Route>
+        </Routes>
+</BrowserRouter>
 </Container>
+    
 
 
-    </ChakraProvider>
-  );
+
+
+
+  </ChakraProvider>);
 }
 
 export default App;
